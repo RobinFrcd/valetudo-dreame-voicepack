@@ -16,8 +16,8 @@ You'll need `ffmpeg` and `vorbis-tools` to make the `wav2ogg.sh` script run.
 ### Available packs
 - 🕴🏻Michael Jackson:
     - https://github.com/RobinFrcd/valetudo-dreame-voicepack/releases/download/mj/mj.tar.gz
-    - MD5: `d00b935eb75c4284814d4200a4ac940e`
+    - MD5: `b682f2eadcc51056aff12bea6baf798a`
 
 - 👸 QueenElizabethII:
     - https://github.com/RobinFrcd/valetudo-dreame-voicepack/releases/download/QueenElizabethII/Queen_Elizabeth.tar.gz
-    - MD5: `af3df2c355a6a2c6aaca00e76b23bbf0`
+    - MD5: `da81813049ec1feb68fc74e05174f0a9`

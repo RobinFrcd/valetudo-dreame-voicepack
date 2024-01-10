@@ -35,14 +35,15 @@ echo $input_dir
 echo $pack_name
 
 # Loop through all the wav files in the input directory
-for file in "$input_dir"/*.wav; do
+for file in "$input_dir"/*.{wav,mp3}; do
     # Get the base name of the file without the extension
-    base_name=$(basename "$file" .wav)
+    base_name="$(basename "$file")"
+    base_name="${base_name%.*}"
     if [[ $convert_flag == true ]]; then
-        ~/Downloads/ffmpeg -i "${file}" -filter:a "loudnorm=I=-5:LRA=1:dual_mono=true:tp=-1, volume=4" "$norm_dir/$base_name.wav"
+        ffmpeg -i "${file}" -filter:a "loudnorm=I=-5:LRA=1:dual_mono=true:tp=-1, volume=4" "$norm_dir/$base_name.wav"
         oggenc "$norm_dir/$base_name.wav" --output "$output_dir/$base_name.ogg" --bitrate 100 --resample 16000
     else
-        ~/Downloads/ffmpeg -i ${file} -acodec libvorbis -b:a 100k -ar 16000 -af "volume=12dB" "$output_dir/$base_name.ogg"
+        ffmpeg -i ${file} -acodec libvorbis -b:a 100k -ar 16000 -af "volume=8dB" "$output_dir/$base_name.ogg"
     fi
 done
 
