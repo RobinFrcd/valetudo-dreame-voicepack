@@ -1,19 +1,28 @@
-[tool.poetry]
+[project]
 name = "valetudo-dreame-voicepack"
 version = "0.1.0"
 description = "AI Generated voice packs for Valetudo controlled robots"
-authors = ["RobinFrcd <29704178+RobinFrcd@users.noreply.github.com>"]
+authors = [{ name = "RobinFrcd", email = "29704178+RobinFrcd@users.noreply.github.com" }]
+requires-python = ">=3.10"
 readme = "README.md"
+dependencies = [
+    "pandas>=2.1.4",
+    "tqdm>=4.66.1",
+    "fakeyou>=1.3.0",
+    "elevenlabs>=2.11.0",
+    "dotenv>=0.9.9",
+    "click>=8.1.8",
+    "requests>=2.32.5",
+]
 
-[tool.poetry.dependencies]
-python = "^3.9"
-pandas = "^2.1.4"
-jupyterlab = "^4.0.9"
-fakeyou = "^1.2.6"
-tqdm = "^4.66.1"
-ipywidgets = "^8.1.1"
-
+[project.scripts]
+transcript_generator = "vdvp.transcript_generator:transcribe_ogg_folder"
+generate_audio= "vdvp.generate_audio:csv_to_audio"
+receiver = "vdvp.minimal_receiver:main"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["vdvp"]

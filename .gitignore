@@ -163,3 +163,4 @@ cython_debug/
 
 *.tar.gz
 voice_packs
+robot_sounds
