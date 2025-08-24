@@ -10,6 +10,7 @@ If you just want to try these on your Valetudo Dreame Robot. Go to `Options - Ro
 |-------------------|-----------------------------------------------------------------------------|--------------------------------------|
 | 🕴🏻Michael Jackson | `https://github.com/RobinFrcd/valetudo-dreame-voicepack/releases/download/mj/mj.tar.gz` | `b682f2eadcc51056aff12bea6baf798a`   |
 | 👸 QueenElizabethII | `https://github.com/RobinFrcd/valetudo-dreame-voicepack/releases/download/QueenElizabethII/Queen_Elizabeth.tar.gz` | `da81813049ec1feb68fc74e05174f0a9`   |
+| 👸2️ QueenElizabethII v2 | `https://github.com/RobinFrcd/valetudo-dreame-voicepack/releases/download/QueenElizabethII-v2/Queen_ElizabethII-v2.tar.gz` | `dbb6bf820e136b17c248453b101914d6`   |
 
 ## Usage
 
